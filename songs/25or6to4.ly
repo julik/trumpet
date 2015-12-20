@@ -14,7 +14,7 @@
 		\key d \major
 		R1 * 8 |
 		cis'4.->
-		\tuplet 3/3 { b16 a16 gis16 } fis2 |
+		\tuplet 3/3 { b16\( a16 gis16 } fis2\) |
 		r2 b8 cis8~ b8 e8->~ |
 		e1~ | e2.~ r4 |
 		cis8-> fis,4-- b8-> e,2 |

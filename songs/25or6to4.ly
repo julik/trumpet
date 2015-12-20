@@ -1,4 +1,5 @@
 % LilyBin
+\version "2.18.2"
 \header {
 	title = "25 or 6 to 4"
 	subtitle = "Chicago 1979"
@@ -13,9 +14,13 @@
 		\time 4/4
 		\key d \major
 		R1 * 8 |
+		
+		\bar "||" |
 		cis'4.->
-		\tuplet 3/3 { b16\( a16 gis16 } fis2\) |
-		r2 b8 cis8~ b8 e8->~ |
+		\tuplet 3/3 { b16\( a16 gis16 } fis2\)
+		\bar "|" |
+		
+		r2 b8 cis8~ b8 e8->~ | \bar "|"
 		e1~ | e2.~ r4 |
 		cis8-> fis,4-- b8-> e,2 |
 		r2 gis16-. gis16-. gis16-. gis16-. gis16-.  gis8-. |
@@ -23,8 +28,11 @@
 		\repeat volta 1 {
 			{ R1 * 3 | b16-- cis16 (d16) e16 (fis2) a4-^ }
 		}
-		R1 *3 | d,,2\glissando fis2 | b,2 r2 | R1 * 2 |
-		b'16-- cis16~ d16 e16~ fis2 a4-^ 
+		R1 *3 | 
+		\mark \markup { "(TRMB)" }
+		d,,2\glissando fis2 | b,2 r2 | R1 * 2 |
+		b'16-- cis16~ d16 e16~ fis2 a4-^ |
+		\bar "||"
 		% double bar repeat ?
 		R1 *8
 		\mark \markup { \musicglyph #"scripts.coda" }
@@ -39,24 +47,25 @@
 		\repeat volta 1 {
 			{ R1 * 3 | b,16-- cis16 (d16) e16 (fis2) a4-^ }
 		}
-		R1 *3 | d,,2\glissando fis2 | b,2 r2 |
+		R1 *3 | 
+		\mark \markup { "(TRMB)" }
+		d,,2\glissando fis2 | b,2 r2 |
+		
 		R1 * 2 | b'16-- cis16 (d16) e16 (fis2) a4-^
-		% double bar repeat?
+		\bar "||"
 		R1 * 8 % guitar solo ++
 		
 		\break
 		% Vamp, then D.C. al Coda
 		% line break
 		\mark \markup { \center-column { "Vamp, the D.C. al Coda" }}
-		\repeat volta 1 {
-			R1 * 4
-		}
+		\repeat volta 1 { R1 * 4 }
 		% line break
 		\break
 		
 		\mark \markup { \musicglyph #"scripts.coda" }
 		R1*8 |
-		% double bar repeat??
+		\bar "||"
 		\mark \markup { "Rit." }
 		b,1 | e2. r4 | e2. r4 | cis2. (g'4) |
 		gis1->\fermata

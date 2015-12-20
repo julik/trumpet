@@ -68,8 +68,7 @@
 		\bar "||"
 		\mark \markup { "Rit." }
 		b,1 | e2. r4 | e2. r4 | cis2. (g'4) |
-		gis1->\fermata
-		% end repeat bar
+		gis1->\fermata \bar "|."
 	}
 	
 	\layout{}
